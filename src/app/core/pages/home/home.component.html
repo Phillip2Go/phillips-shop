@@ -1,0 +1,59 @@
+<app-navbar></app-navbar>
+
+<div class="container-fluid bg-light" *ngIf="bigBannerAds?.length">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10"><app-big-banner [data]="bigBannerAds[0]"></app-big-banner></div>
+    <div class="col-1"></div>
+  </div>
+</div>
+
+<div class="container bg-light" *ngIf="carouselAds?.length">
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8"><app-carousel [items]="carouselAds"></app-carousel></div>
+    <div class="col-2"></div>
+  </div>
+</div><br>
+
+<div class="container d-flex justify-content-center bg-light" *ngIf="itemBannerAds?.length || smallBannerAds?.length">
+  <div class="row">
+    <!--
+    <div class="col-3">
+      <iframe width="285" height="175"
+              src="https://www.youtube.com/embed/ayacXf4ghEc"></iframe>
+    </div>-->
+    <div class="col-4"><app-item-banner [data]="itemBannerAds[0]"></app-item-banner></div>
+    <div class="col-4"><app-item-banner [data]="itemBannerAds[1]"></app-item-banner></div>
+    <div class="col-4"><app-small-banner [data]="smallBannerAds[0]"></app-small-banner></div>
+  </div>
+</div><br>
+
+<div class="container justify-content-center bg-light">
+  <div class="row product-row">
+    <div class="col-3" *ngFor="let prod of userProducts$">
+      <app-shop-item [data]="prod"></app-shop-item><br>
+    </div>
+  </div>
+</div><br>
+
+<div class="container justify-content-center bg-light">
+  <div class="row product-row">
+    <div class="col-3" *ngFor="let prod of products$">
+      <app-shop-item [data]="prod"></app-shop-item><br>
+    </div>
+  </div>
+</div><br>
+
+<div class="container-fluid bg-light" *ngIf="bigBannerAds?.length">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10"><app-big-banner [data]="bigBannerAds[1]"></app-big-banner></div>
+    <div class="col-1"></div>
+  </div>
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10"><app-big-banner [data]="bigBannerAds[2]"></app-big-banner></div>
+    <div class="col-1"></div>
+  </div>
+</div>

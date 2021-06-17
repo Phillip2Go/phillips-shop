@@ -33,7 +33,12 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/popper.js/dist/umd/popper.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "./../../notagg/no.tagg_v0_1/src/dist/notagg.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -68,7 +73,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "phillips-shop:build"
+            "browserTarget": "phillips-shop:build",
+            "port": 4500
           },
           "configurations": {
             "production": {

@@ -1,0 +1,44 @@
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <a (click)="createDataLayer(items[0].adType, items[0].title, items[0].tag)">
+        <img src="http://localhost:1337{{items[0].cover.url}}" class="d-block w-100" alt="...">
+      </a>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Tag: {{items[0].tag}}</h5>
+        <p>{{items[0].description}}</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <a (click)="createDataLayer(items[1].adType, items[1].title, items[1].tag)">
+        <img src="http://localhost:1337{{items[1].cover.url}}" class="d-block w-100" alt="...">
+      </a>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Tag: {{items[1].tag}}</h5>
+        <p>{{items[1].description}}</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <a (click)="createDataLayer(items[2].adType, items[2].title, items[2].tag)">
+        <img src="http://localhost:1337{{items[2].cover.url}}" class="d-block w-100" alt="...">
+      </a>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Tag: {{items[2].tag}}</h5>
+        <p>{{items[2].description}}</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

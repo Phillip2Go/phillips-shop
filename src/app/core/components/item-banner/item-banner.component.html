@@ -2,6 +2,6 @@
   <img src="http://localhost:1337{{data.cover.url}}" class="card-img-top" alt="...">
   <div class="card-body">
     <p class="card-text">{{data.description}}</p>
-    <a (click)="createDataLayer()" href="#" class="card-link">Tag: {{data.tag}}</a>
+    <a [routerLink]="detailPath" [state]="{data: this.data}" (click)="createDataLayer()" href="#" class="card-link">Tag: {{data.tag}}</a>
   </div>
 </div>

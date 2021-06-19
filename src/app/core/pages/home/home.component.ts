@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this._tagg = _tagg;
     this._tagg.init();
-    this.fetchUserProducts(5, this._tagg.getCookieUserId('_taggUserId'));
+    this.fetchUserProducts(4, this._tagg.getCookieUserId('_taggUserId'));
     this.fetchRandomAmountProducts(8);
     this.fetchAds();
   }

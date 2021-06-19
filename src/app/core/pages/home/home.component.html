@@ -29,13 +29,16 @@
   </div>
 </div><br>
 
-<div class="container justify-content-center bg-light">
+<div class="container justify-content-center bg-light" *ngIf="userProducts$?.length">
+  <h6>Recommended for you:</h6>
   <div class="row product-row">
     <div class="col-3" *ngFor="let prod of userProducts$">
       <app-shop-item [data]="prod"></app-shop-item><br>
     </div>
   </div>
+  <hr>
 </div><br>
+<br><br>
 
 <div class="container justify-content-center bg-light">
   <div class="row product-row">

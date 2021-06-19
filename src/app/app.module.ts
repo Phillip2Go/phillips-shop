@@ -13,6 +13,7 @@ import { ItemBannerComponent } from './core/components/item-banner/item-banner.c
 import { SpecialBannerComponent } from './core/components/special-banner/special-banner.component';
 import {HttpClientModule} from '@angular/common/http';
 import {PhillipsCmsService} from './core/service/phillips-cms.service';
+import { DetailComponent } from './core/pages/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {PhillipsCmsService} from './core/service/phillips-cms.service';
     SmallBannerComponent,
     BigBannerComponent,
     ItemBannerComponent,
-    SpecialBannerComponent
+    SpecialBannerComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

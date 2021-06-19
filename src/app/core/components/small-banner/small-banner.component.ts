@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {DETAIL_PATH} from '../../../routing/route-paths';
 
 declare var _tagg: any;
 
@@ -11,11 +12,13 @@ export class SmallBannerComponent implements OnInit {
   @Input() data: any = {};
 // tslint:disable-next-line:variable-name
   _tagg: any;
+  detailPath: any;
 
   constructor() { }
 
   ngOnInit(): void {
     this._tagg = _tagg;
+    this.detailPath = DETAIL_PATH;
   }
 
   createDataLayer(): void {

@@ -1,4 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {DETAIL_PATH} from '../../../routing/route-paths';
 
 declare var _tagg: any;
 
@@ -11,11 +13,17 @@ export class BigBannerComponent implements OnInit {
   @Input() data: any = {};
   // tslint:disable-next-line:variable-name
   _tagg: any;
+  detailPath: any;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this._tagg = _tagg;
+    this.detailPath = DETAIL_PATH;
+  }
+
+  goToComponentB(): void {
+    this.router.navigate([DETAIL_PATH]);
   }
 
   createDataLayer(): void {

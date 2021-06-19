@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+
+<div class="container justify-content-center bg-light">
+  <a [routerLink]="homePath" class="btn btn-primary">Back</a>
+  <h5>{{data.description}}</h5>
+  <img src="http://localhost:1337{{data.cover.url}}" class="d-block w-100" alt="...">
+  <br>
+  <h6>Recommended for you:</h6>
+</div>
+
+<div class="container justify-content-center bg-light">
+  <div class="row product-row">
+    <div class="col-3" *ngFor="let prod of userProducts$">
+      <app-shop-item [data]="prod"></app-shop-item><br>
+    </div>
+  </div>
+</div>

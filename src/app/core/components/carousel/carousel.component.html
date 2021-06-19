@@ -6,7 +6,7 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <a (click)="createDataLayer(items[0].adType, items[0].title, items[0].tag)">
+      <a [routerLink]="detailPath" [state]="{data: this.items[0]}" (click)="createDataLayer(items[0].adType, items[0].title, items[0].tag)">
         <img src="http://localhost:1337{{items[0].cover.url}}" class="d-block w-100" alt="...">
       </a>
       <div class="carousel-caption d-none d-md-block">
@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <a (click)="createDataLayer(items[1].adType, items[1].title, items[1].tag)">
+      <a [routerLink]="detailPath" [state]="{data: this.items[1]}" (click)="createDataLayer(items[1].adType, items[1].title, items[1].tag)">
         <img src="http://localhost:1337{{items[1].cover.url}}" class="d-block w-100" alt="...">
       </a>
       <div class="carousel-caption d-none d-md-block">
@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <a (click)="createDataLayer(items[2].adType, items[2].title, items[2].tag)">
+      <a [routerLink]="detailPath" [state]="{data: this.items[2]}" (click)="createDataLayer(items[2].adType, items[2].title, items[2].tag)">
         <img src="http://localhost:1337{{items[2].cover.url}}" class="d-block w-100" alt="...">
       </a>
       <div class="carousel-caption d-none d-md-block">

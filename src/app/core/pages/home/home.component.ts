@@ -9,7 +9,6 @@ declare var _tagg: any;
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-@Injectable()
 export class HomeComponent implements OnInit {
   userProducts$: any = [];
   products$: any = [];

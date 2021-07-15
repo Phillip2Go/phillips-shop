@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {ORDER_PATH} from '../../../routing/route-paths';
 
 declare var _tagg: any;
 
@@ -11,11 +12,13 @@ export class ShopItemComponent implements OnInit {
   @Input() data: any = {};
 // tslint:disable-next-line:variable-name
   _tagg: any;
+  orderPath: any;
 
   constructor() { }
 
   ngOnInit(): void {
     this._tagg = _tagg;
+    this.orderPath = ORDER_PATH;
   }
 
   createDataLayer(): void {

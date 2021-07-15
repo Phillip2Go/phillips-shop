@@ -14,6 +14,7 @@ import { SpecialBannerComponent } from './core/components/special-banner/special
 import {HttpClientModule} from '@angular/common/http';
 import {PhillipsCmsService} from './core/service/phillips-cms.service';
 import { DetailComponent } from './core/pages/detail/detail.component';
+import { OrderComponent } from './core/pages/order/order.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DetailComponent } from './core/pages/detail/detail.component';
     BigBannerComponent,
     ItemBannerComponent,
     SpecialBannerComponent,
-    DetailComponent
+    DetailComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,

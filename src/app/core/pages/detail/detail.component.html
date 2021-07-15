@@ -1,9 +1,12 @@
 <app-navbar></app-navbar>
 
 <div class="container justify-content-center bg-light">
-  <h5>{{data.description}}</h5>
   <img src="http://localhost:1337{{data.cover.url}}" class="d-block w-100" alt="...">
-  <a [routerLink]="homePath" class="btn btn-primary">Back</a>
+  <br>
+  <!--
+  <h5 class="text-center">{{data.description}}</h5>
+  -->
+  <a [routerLink]="homePath" class="d-grid gap-2 btn btn-primary">Back</a>
   <br>
   <h6>Recommended for you:</h6>
 </div>
